@@ -1,0 +1,216 @@
+@charset "utf-8";
+/* CSS Document */
+/* style.css */
+
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and typography */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #005a8d;
+  color: #fff;
+  padding: 20px 10%;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+/* Logo */
+/* New styles for logo and header layout */
+.logo-title {
+  display: flex;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #005a8d;
+  color: #fff;
+}
+
+.logo {
+  height: 200px;
+  width: auto;
+  margin-right: 15px;
+}
+
+/* Optional: styling for the site text next to the logo */
+.site-info h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.site-info p {
+  margin: 0;
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+/* Rest of your header styling can follow if needed */
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #0073aa;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content area */
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+/* Sections */
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Hero Section (Homepage) */
+.hero {
+  background: url('../html04/html04/case4/%27%27') center center/cover no-repeat;
+  height: 400px;
+  position: relative;
+  color: #fff;
+}
+
+.hero .hero-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Feature list styles */
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.features-list div {
+  flex: 1 1 30%;
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Testimonials */
+.testimonials blockquote {
+  font-style: italic;
+  border-left: 3px solid #0073aa;
+  margin: 20px 0;
+  padding-left: 15px;
+}
+
+/* Call-to-Action */
+.cta {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.cta a {
+  background-color: #28a745;
+  color: #fff;
+  padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cta a:hover {
+  background-color: #218838;
+}
+
+/* Form Elements */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+
+form input[type="submit"] {
+  background-color: #0073aa;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #005a8d;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* Features */
+.feature-desc {
+  font-size: 0.9em;
+  color: #555;
+  margin-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  .container {
+    width: 90%;
+  }
+  .features-list {
+    flex-direction: column;
+  }
+}
+
