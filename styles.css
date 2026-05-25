@@ -1,0 +1,348 @@
+@charset "utf-8";
+
+/* RoboCAT Polished Styles - same project, cleaner presentation */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #eef5fb;
+  --surface: #ffffff;
+  --primary: #075985;
+  --primary-dark: #0f2f45;
+  --secondary: #0ea5e9;
+  --accent: #22c55e;
+  --accent-dark: #16863f;
+  --text: #1f2937;
+  --muted: #5f6f82;
+  --border: #cfe0ec;
+  --shadow: 0 10px 25px rgba(10, 48, 73, 0.12);
+  --radius: 18px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background:
+    radial-gradient(circle at top left, rgba(14, 165, 233, 0.18), transparent 28%),
+    linear-gradient(180deg, var(--bg), #ffffff);
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: #fff;
+  padding: 24px 0;
+}
+
+.logo-title {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  width: 115px;
+  height: 115px;
+  object-fit: contain;
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 10px;
+  border-radius: 24px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.site-info h1 {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.site-info p {
+  font-size: 1.1rem;
+  color: #d8edf8;
+  font-style: normal;
+}
+
+/* Navigation */
+nav {
+  background-color: rgba(7, 89, 133, 0.96);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+nav ul {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+/* Main content */
+.container {
+  width: min(1100px, 92%);
+  margin: 32px auto;
+}
+
+section {
+  margin-bottom: 28px;
+  padding: 26px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+section h2 {
+  color: var(--primary-dark);
+  font-size: 1.55rem;
+  margin-bottom: 12px;
+}
+
+section p {
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+/* Homepage hero */
+.hero {
+  min-height: 430px;
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(15, 47, 69, 0.88), rgba(7, 89, 133, 0.72)),
+    radial-gradient(circle at 70% 30%, rgba(34, 197, 94, 0.35), transparent 25%),
+    linear-gradient(135deg, #0f2f45, #075985);
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "RoboCAT";
+  position: absolute;
+  right: 5%;
+  bottom: -25px;
+  font-size: clamp(4rem, 14vw, 9rem);
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.08);
+  letter-spacing: 0.04em;
+}
+
+.hero .hero-text {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 24px;
+  max-width: 650px;
+}
+
+.hero h2 {
+  font-size: clamp(2.1rem, 5vw, 4rem);
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: #e8f7ff;
+}
+
+/* Buttons and CTA */
+.cta {
+  margin-top: 24px;
+  text-align: left;
+}
+
+.cta a,
+form input[type="submit"] {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 12px 18px;
+  text-decoration: none;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cta a:hover,
+form input[type="submit"]:hover {
+  background-color: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+/* Forms */
+form {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+label {
+  font-weight: bold;
+  color: var(--primary-dark);
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form select {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: 100%;
+  font: inherit;
+  background-color: #f8fbfd;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus,
+form select:focus {
+  outline: 3px solid rgba(14, 165, 233, 0.2);
+  border-color: var(--secondary);
+}
+
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  display: grid;
+  gap: 16px;
+}
+
+legend {
+  color: var(--primary-dark);
+  font-weight: bold;
+  padding: 0 8px;
+}
+
+.feature-desc {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 4px 0 0 28px;
+}
+
+/* Testimonials */
+.testimonials blockquote {
+  font-size: 1.08rem;
+  font-style: italic;
+  border-left: 5px solid var(--secondary);
+  background-color: #f3f9fd;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.testimonials cite {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-dark);
+  color: #d8edf8;
+  text-align: center;
+  padding: 22px 0;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-title {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    width: 95px;
+    height: 95px;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  nav a {
+    padding: 8px 11px;
+    font-size: 0.95rem;
+  }
+
+  .hero {
+    min-height: 360px;
+  }
+
+  .hero .hero-text {
+    padding: 24px;
+  }
+
+  section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 94%;
+  }
+
+  .hero .hero-text {
+    width: 94%;
+  }
+
+  .site-info p {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    gap: 4px;
+  }
+}
